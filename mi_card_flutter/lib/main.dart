@@ -42,49 +42,42 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   letterSpacing: 2.5),
             ),
-            Container(
-              color: Colors.white,
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-              padding: EdgeInsets.all(10),
-              child: Row(
-                children: <Widget>[
-                  Icon(
-                    Icons.phone,
-                    color: Colors.teal,
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    '+55 11 99999-9999',
-                    style: TextStyle(fontFamily: 'SourceSansPro', fontSize: 20),
-                  )
-                ],
+            SizedBox(
+              height: 20,
+              width: 150,
+              child: Divider(
+                color: Colors.teal.shade100,
               ),
             ),
-            Container(
-              color: Colors.white,
-              padding: EdgeInsets.all(10),
+            Card(
               margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-              child: Row(
-                children: <Widget>[
-                  Icon(
-                    Icons.email,
-                    color: Colors.teal,
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    'cssonddos@gmail.com',
-                    style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.teal.shade900,
-                        fontFamily: 'SourceSansPro'),
-                  ),
-                ],
+              child: ListTile(
+                leading: Icon(
+                  Icons.phone,
+                  color: Colors.teal,
+                ),
+                title: Text(
+                  '+55 11 99999-9999',
+                  style: TextStyle(fontFamily: 'SourceSansPro', fontSize: 20),
+                ),
               ),
-            )
+            ),
+            Card(
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+              child: ListTile(
+                leading: Icon(
+                  Icons.email,
+                  color: Colors.teal,
+                ),
+                title: Text(
+                  'cssonddos@gmail.com',
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.teal.shade900,
+                      fontFamily: 'SourceSansPro'),
+                ),
+              ),
+            ),
           ],
         )),
       ),
