@@ -8,8 +8,10 @@ class XylophoneApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.black,
         body: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               createBtn(1, Colors.red),
               createBtn(2, Colors.orange),
@@ -26,12 +28,14 @@ class XylophoneApp extends StatelessWidget {
   }
 
   Widget createBtn(int sound, MaterialColor color) {
-    return FlatButton(
-      color: color,
-      onPressed: () {
-        final player = AudioCache();
-        player.play('note$sound.wav');
-      },
+    return Expanded(
+      child: FlatButton(
+        color: color,
+        onPressed: () {
+          final player = AudioCache();
+          player.play('note$sound.wav');
+        },
+      ),
     );
   }
 }
